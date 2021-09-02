@@ -60,9 +60,9 @@ var socket = new SockJS('http://localhost:8080/stomp-endpoint');
 For example, after we finished payment recall we need to tell the runner to delivery.Like this:
 ```java
 
-	@Resource
+    @Resource
     private SimpMessagingTemplate simpMessagingTemplate;
-	/**
+    /**
      * payment recall
      */
     public void payNotify() {
