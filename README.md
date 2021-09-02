@@ -54,15 +54,15 @@ var socket = new SockJS('http://localhost:8080/stomp-endpoint');
     });
 
 ```
-> new SockJS() construct need ==http== protocol instead of ==ws==
+> new SockJS() construct need <mark>http</mark> protocol instead of <mark>ws</mark>
 
 ## When send message ?
 For example, after we finished payment recall we need to tell the runner to delivery.Like this:
 ```java
+
 	@Resource
     private SimpMessagingTemplate simpMessagingTemplate;
-
-/**
+	/**
      * payment recall
      */
     public void payNotify() {
@@ -72,4 +72,4 @@ For example, after we finished payment recall we need to tell the runner to deli
 
 ```
 
-> If no client subscribe ==/topic/messages==, ==sayHello()== will not work.
+> If no client subscribe <mark>/topic/messages</mark>,  <mark>sayHello()</mark> will not work.
