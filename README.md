@@ -10,7 +10,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
     public void configureMessageBroker(MessageBrokerRegistry registry) {
         registry.enableSimpleBroker("/topic");
         registry.setApplicationDestinationPrefixes("/app");
-        registry.setPathMatcher(new AntPathMatcher("."));
+        //registry.setPathMatcher(new AntPathMatcher("."));
     }
 
     @Override
